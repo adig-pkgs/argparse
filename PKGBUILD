@@ -18,7 +18,7 @@ build() {
 }
 
 package() {
-  make DESTDIR="${pkgdir}" -C "${srcdir}/${pkgname}-${pkgver}" install
+  DESTDIR="${pkgdir}" cmake --install "${srcdir}/${pkgname}-${pkgver}"
 }
 
 # vim:set ts=2 sw=2 et:
